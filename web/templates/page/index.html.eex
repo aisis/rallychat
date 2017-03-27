@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to %{name}", name: "RallyChat!" %></h2>
+  <h1>Listing Users</h1>
+
+<table class="table">
+    <%= for user <- @users do %>
+    <tr>
+    <td><%= render "user.html", user: user %></td>
+    <td><%= link "View", to: user_path(@conn, :show, user.id) %></td>
+</tr>
+<% end %>
+</table>
+
+ <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+</div>
+
+<div id="message" class="container">
+</div>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-sm-2">
+        <div class="input-group">
+          <span class="input-group-addon">@</span>
+          <input id="username" type="text" class="form-control" placeholder="username">
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+      <div class="col-sm-10">
+        <input id="message-input" class="form-control" />
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+  </div>
+</div>
