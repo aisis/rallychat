@@ -1,5 +1,5 @@
 defmodule Rallychat.RoomChannel do
-    use Pheonix.Channel
+    use Rallychat.Web, :channel
     require Logger
 
     def join("rooms:lobby", message, socket) do
