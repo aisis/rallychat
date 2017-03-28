@@ -1,0 +1,42 @@
+Facebook
+https://www.facebook.com/Rallychat-405925226432088/
+API version  v2.8
+App ID
+800940216737041
+App secret
+e8f97abe75e0895efe910a46e43fe648
+
+Instagram (the account was made from facebook)
+@RadzoRally
+
+Twitter
+Application Settings
+Your application's Consumer Key and Secret are used to authenticate requests to the Twitter Platform.
+Access level	Read and write (modify app permissions)
+Consumer Key (API Key)	Cuqs93xXsW2QrNUSu1Z0Eb87I (manage keys and access tokens)
+Callback URL	None
+Callback URL Locked	No
+Sign in with Twitter	Yes
+App-only authentication	https://api.twitter.com/oauth2/token
+Request token URL	https://api.twitter.com/oauth/request_token
+Authorize URL	https://api.twitter.com/oauth/authorize
+Access token URL	https://api.twitter.com/oauth/access_token
+
+Application Settings
+Keep the "Consumer Secret" a secret. This key should never be human-readable in your application.
+Consumer Key (API Key)	Cuqs93xXsW2QrNUSu1Z0Eb87I
+Consumer Secret (API Secret)	XJF2HczpBrlZZmCjvkl2b6gMWjPqKQXHsqVfawlWgQN44sIlku
+Access Level	Read and write (modify app permissions)
+Owner	radzodevE
+Owner ID	844005190101422081
+Application Actions
+Regenerate Consumer Key and SecretChange App Permissions
+Your Access Token
+This access token can be used to make API requests on your own account's behalf. Do not share your access token secret with anyone.
+Access Token	844005190101422081-x3JRubGQ4cuDKffebzN2HczRUdSxBgP
+Access Token Secret	jZdSJvm4Dgg7EsqnaAf2SD05wqTN8VR2oPRNESW42VBlX
+Access Level	Read and write
+Owner	radzodevE
+Owner ID	844005190101422081
+Token Actions
+Regenerate My Access Token and Token SecretRevoke Token Access
