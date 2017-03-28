@@ -36,6 +36,8 @@ defmodule Rallychat.Web do
 
       import Rallychat.Router.Helpers
       import Rallychat.Gettext
+
+      import Rallychat.Auth, only: [authenticate_user: 2]
     end
   end
 
