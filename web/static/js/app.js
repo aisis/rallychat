@@ -59,7 +59,7 @@ class App {
     })
 
     chan.on("user:entered", msg => {
-      var username = this.sanitize(msg.user || "anonymous")
+      var username = this.sanitize(msg.user || "rallycat")
       $messages.append(`<br/><i>[${username} entered]</i>`)
     })
   }
@@ -67,7 +67,7 @@ class App {
   static sanitize(html){ return $("<div/>").text(html).html() }
 
   static messageTemplate(msg){
-    let username = this.sanitize(msg.user || "anonymous")
+    let username = this.sanitize(msg.user || "rallycat")
     let body     = this.sanitize(msg.body)
 
     return(`<p><a href='#'>[${username}]</a>&nbsp; ${body}</p>`)
