@@ -1,9 +1,8 @@
 defmodule Rallychat.User do
     use Rallychat.Web, :model
-    use Arc.Ecto.Schema
+  
 
   schema "users" do
-    field :avatar, Rallychat.Avatar.Type
     field :name, :string
     field :username, :string
     field :password, :string, virtual: true
@@ -25,13 +24,6 @@ defmodule Rallychat.User do
     |> cast(params, ~w(password))
     |> validate_length(:password, min: 6, max: 100)
     |> put_pass_hash()
-  end
-  
-  def changeset(user, params \\ :invalid) do
-    user
-    |> cast(params, [:name])
-    |> cast_attachments(params, [:avatar])
-    |> validate_required([:name, :avatar])
   end
 end
 
