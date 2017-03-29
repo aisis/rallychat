@@ -1,6 +1,6 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+<div>
+  <h2><%= gettext "Welcome to %{name}", name: "rallychat" %></h2>
+  <p class="lead">Express the line of [respect]</p>
 </div>
 <div id="messages" class="container">
 </div>
@@ -10,6 +10,7 @@
       <div class="col-sm-2">
         <div class="input-group">
           <span class="input-group-addon">@</span>
+          <!-- add font  styling-->
           <input id="username" type="text" class="form-control" placeholder="username">
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->

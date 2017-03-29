@@ -35,6 +35,22 @@ defmodule Rallychat.UserController do
         
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
+
+  def update(conn, %{"id" => id, "user" => user_params}) do
+    user = Repo.get(User, id)
+    changeset = User.changeset(user, user_params)
+
+    if changeset.valid? do
+      Repo.update(changeset)
+
+      conn
+      |> put_flash(:info, "User updated successfully.")
+      |> redirect(to: user_path(conn, :index))
+    else
+      render conn, "edit.html", user: user, changeset: changeset
+    end
+  end
+
     end
   end
 end

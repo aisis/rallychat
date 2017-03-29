@@ -19,7 +19,7 @@
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-import {Socket, LongPoller} from "phoenix"
+import {LongPoller, Socket} from "phoenix"
 
 class App {
 
@@ -29,7 +29,7 @@ class App {
     })
 
     socket.connect({user_id: "123"})
-    var $status    = $("#status")
+    var $status    = $("#status") //page/index.html.eex <div id="status"></div>
     var $messages  = $("#messages")
     var $input     = $("#message-input")
     var $username  = $("#username")
@@ -45,6 +45,7 @@ class App {
     chan.onError(e => console.log("something went wrong", e))
     chan.onClose(e => console.log("channel closed", e))
 
+//this part  the message is typed in.
     $input.off("keypress").on("keypress", e => {
       if (e.keyCode == 13) {
         chan.push("new:msg", {user: $username.val(), body: $input.val()})
