@@ -21,6 +21,9 @@ defmodule Rallychat.Router do
 
     resources "/users", UserController, only: [:index, :show, :new, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+
+    #move to protected route eventualy
+    get "/lobby", RallyController, :index
   end
 
   # Other scopes may use custom stacks.
