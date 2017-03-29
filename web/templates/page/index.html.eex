@@ -8,13 +8,35 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2">
-        <div class="input-group">
+        <link rel="stylesheet" href="../../static/vendor/font.css" text=css/>
+      <div class="input-group">
+      
           <span class="input-group-addon">@</span>
-          <!-- add font  styling-->
+          <!-- add fontstyling-->
+
           <input id="username" type="text" class="form-control" placeholder="username">
-        </div><!-- /input-group -->
+        </div> <!-- /input-group -->
       </div><!-- /.col-lg-6 -->
+
+      <script>function changeFont() {
+        fontface = document.getElementById("fontface");
+        }
+        </script>
       <div class="col-sm-10">
+      <select id="fontface">
+        <option "{ font-family: 'Londrina Sketch' }">Londrina Sketch</option>
+        <option "{ font-family: 'Sirin Stencil' }">Sirin Stencil</option>
+        <option "{ font-family: 'Monofett' }">Monofett</option>
+        <option "{ font-family: 'Lovers Quarrel' }">Lovers Quarrel</option>
+        <option "{ font-family: 'Akronim' }">Akronim</option>
+        <option "{ font-family: 'Swanky and Moo Moo' }">Swanky and Moo Moo</option>
+        <option "{ font-family: 'Amatica SC' }">Amatica SC</option>
+        <option "{ font-family: 'Bilbo Swash Caps' }">Bilbo Swash</option>
+        <option "{ font-family: 'Megrim' }">Megrim</option>
+        <option "{ font-family: 'Barrio' }">Barrio</option>
+        <option "{ font-family: 'Rock Salt' }">Rock Salt</option>
+      </select>
+
         <input id="message-input" class="form-control" />
       </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->
