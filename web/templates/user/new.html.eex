@@ -11,10 +11,6 @@
   <%= error_tag f, :name %>
 </div>
 <div class="form-group">
-  <%= text_input f, :username, placeholder: "Username", class: "form-control" %>
-  <%= error_tag f, :username %>
-</div>
-<div class="form-group">
   <%= password_input f, :password, placeholder: "Pasword", class: "form-control" %>
   <%= error_tag f, :passowrd %>
 </div>

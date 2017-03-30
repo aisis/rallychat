@@ -20,7 +20,7 @@ defmodule Rallychat.UserController do
 
   def new(conn, _params) do
     changeset = User.changeset(%User{})
-    render conn, "new.html", changeset: changeset
+    render(conn, "new.html", changeset: changeset)
   end
 
 
@@ -31,7 +31,7 @@ defmodule Rallychat.UserController do
         conn
         |> Rallychat.Auth.login(user)
         |> put_flash(:info, "#{user.name} created!")
-        |> redirect(to: user_path(conn, :index))
+        |> redirect(to: rally_path(conn, :index))
         
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)

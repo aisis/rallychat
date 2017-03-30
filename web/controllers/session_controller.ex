@@ -7,12 +7,12 @@ defmodule Rallychat.SessionController do
   end
 
 
-  def create(conn, %{"session" => %{"username" => user, "password" => pass}}) do
-    case Rallychat.Auth.login_by_username_pass(conn, user, pass, repo: Repo) do
+  def create(conn, %{"session" => %{"name" => name, "password" => pass}} = params) do
+    case Rallychat.Auth.login_by_username_pass(conn, name, pass, repo: Repo) do
       {:ok, conn} ->
         conn
         |> put_flash(:info, "welcome back")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: rally_path(conn, :index))
 
       {:error, _, conn} ->
         conn

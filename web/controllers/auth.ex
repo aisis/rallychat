@@ -20,9 +20,9 @@ defmodule Rallychat.Auth do
     |> configure_session(renew: true)
   end
 
-  def login_by_username_pass(conn, username, given_pass, opts) do
+  def login_by_username_pass(conn, name, given_pass, opts) do
     repo = Keyword.fetch!(opts, :repo)
-    user = repo.get_by(Rallychat.User, username: username)
+    user = repo.get_by(Rallychat.User, name: name)
 
     cond do
       user && checkpw(given_pass, user.password_hash) ->
