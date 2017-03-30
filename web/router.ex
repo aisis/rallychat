@@ -23,7 +23,7 @@ defmodule Rallychat.Router do
     resources "/sessions", SessionController, only: [:new, :create, :delete]
 
     #move to protected route eventualy
-    get "/lobby", RallyController, :index
+    resources "/lobby", RallyController, only: [:index, :create]
   end
 
   # Other scopes may use custom stacks.

@@ -2,7 +2,7 @@ defmodule Rallychat.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", Rallychat.RoomChannel
+ channel "rally:*", Rallychat.RallyChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
