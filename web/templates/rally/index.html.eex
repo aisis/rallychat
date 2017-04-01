@@ -14,25 +14,33 @@
 
 <div>
   <h3>div for sending messages</h3>
-  <!-- <%=  form_for @changeset, rally_path(@conn, :create), fn f -> %>
-       <label>
-       message?<%= text_input f, :body, placeholder: "catty messages here", id: "chat-input", class: "form-control"%>
-       <%= error_tag f, :body %>
-       </label>
-
-
-       <%= submit "Send", class: "btn btn-primary" %>
-       <% end %> -->
   <div id="messages"></div>
   <input id="chat-input" type="text"></input>
 </div>
+<!-- <script>
+     window.addEventListener("load", function() {
+
+     document.getElementById('messages').addEventListener('load', function() {
+     twttr.ready(function (twttr) {
+     twttr.events.bind('tweet', function(e){
+     /* if(!e) return;
+     * ga('send', 'social', 'twitter', 'tweet', theURL);*/
+     twttr.widgets.load(
+     document.getElementById("messages")
+     );
+     })
+     });
+     }, false);
+     }, false);
+
+     </script> -->
 <script>
  twttr.widgets.createTweet(
-   '847387679629000704',
+   '20',
    document.getElementById('first-tweet'),
    {
-     align: 'left'
-   })
-      .then(function (el) {
-        console.log("Tweet displayed.")
-      });</script>
+     theme: 'dark'
+   }
+ );
+document.getElementById('first-tweet').then('first-tweet')
+</script>

@@ -14,11 +14,6 @@ defmodule Rallychat.RallyChannel do
     {:noreply, socket}
   end
 
-  # def  handle_in({"tweet", payload}, socket) do
-  #   IO.puts "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-  #   IO.inspect payload
-  #   {:noreply, socket}
-  # end
   
   def handle_info(:start_twit, socket) do
     IO.puts "starting streamer"
@@ -36,6 +31,8 @@ defmodule Rallychat.RallyChannel do
     {:noreply, socket}
   end
 
+
+  
   def handle_info(_msg, socket) do
     {:noreply, socket}
   end
@@ -51,11 +48,6 @@ defmodule Rallychat.RallyChannel do
           send(pid, {"tweet", id})
       end
     end
-  end
-
-
-  def get_embed(id) do
-    
   end
 
 
