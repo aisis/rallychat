@@ -71,6 +71,18 @@ channel.on("new_msg", payload => {
   messageContainer.appendChild(messageItem)
 })
 
+
+channel.on("tweet", payload => {
+
+  const messageItem = document.createElement("div");
+  let data = JSON.stringify(payload)
+  console.log(data, payload)
+  messageItem.innerHTML = payload.html;
+  messageContainer.appendChild(messageItem)
+ 
+})
+
+
 channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })

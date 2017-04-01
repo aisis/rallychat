@@ -6,7 +6,9 @@
 <% end %>
 
 <div>
-  <h3>div for ralley public view</h2>
+  <div id="first-tweet"></div>
+  <h3>div for rally public view</h2>
+  
     <div id="messages"></div>
 </div>
 
@@ -24,3 +26,13 @@
   <div id="messages"></div>
   <input id="chat-input" type="text"></input>
 </div>
+<script>
+ twttr.widgets.createTweet(
+   '847387679629000704',
+   document.getElementById('first-tweet'),
+   {
+     align: 'left'
+   })
+      .then(function (el) {
+        console.log("Tweet displayed.")
+      });</script>

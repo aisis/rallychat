@@ -3,7 +3,8 @@ defmodule Rallychat.UserSocket do
 
   ## Channels
  channel "rally:*", Rallychat.RallyChannel
-
+ channel "twitter:stream", Rallychat.TwitterChannel
+ 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
   # transport :longpoll, Phoenix.Transports.LongPoll
