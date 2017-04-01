@@ -41,3 +41,5 @@ config :rallychat, Rallychat.Repo,
   database: "rallychat_dev",
   hostname: "localhost",
   pool_size: 10
+
+import_config "twit.exs"
