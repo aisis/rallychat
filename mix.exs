@@ -38,7 +38,6 @@ defmodule Rallychat.Mixfile do
      {:phoenix_live_reload, "~> 1.0"}, # make this only be dev again
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:cf, }
      {:distillery, ">= 0.8.0", warn_missing: false},
      {:edeliver, git: "https://github.com/boldpoker/edeliver.git"},
      {:comeonin, "~>3.0"},
