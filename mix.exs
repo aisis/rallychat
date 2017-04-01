@@ -19,7 +19,7 @@ defmodule Rallychat.Mixfile do
   def application do
     [mod: {Rallychat, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :extwitter, :edeliver, :phoenix_live_reload]]
+                    :phoenix_ecto, :postgrex, :comeonin, :extwitter, :exrm, :edeliver, :phoenix_live_reload]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,6 +38,7 @@ defmodule Rallychat.Mixfile do
      {:phoenix_live_reload, "~> 1.0"}, # make this only be dev again
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
+     {:exrm, ">= 0.16", warn_missing: false},
      {:edeliver, git: "https://github.com/boldpoker/edeliver.git"},
      {:comeonin, "~>3.0"},
      {:extwitter, "~> 0.8"}
