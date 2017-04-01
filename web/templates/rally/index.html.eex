@@ -1,46 +1,27 @@
-<h1>This will be view of the ui for rally</h1>
 <%= if @changeset.action do %>
   <div class="alert alert-danger">
     <p>oops, check errors below.</p>
   </div>
 <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      
+      
+      <div id="messages" height="600" position="fixed"></div>
 
-<div>
-  <div id="first-tweet"></div>
-  <h3>div for rally public view</h2>
-  
-    <div id="messages"></div>
+      <div id="footer">
+        <input id="chat-input" type="text"></input>
+      </div>
+      
+    </div>
+    <div class="col-xs-6">
+      <div class="container-fluid">
+        
+        <iframe src='https://www.juicer.io/api/feeds/respecthawaii/iframe' frameborder='0' width='600' height='600' style='display:block;margin:0 auto;'></iframe>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div>
-  <h3>div for sending messages</h3>
-  <div id="messages"></div>
-  <input id="chat-input" type="text"></input>
-</div>
-<!-- <script>
-     window.addEventListener("load", function() {
 
-     document.getElementById('messages').addEventListener('load', function() {
-     twttr.ready(function (twttr) {
-     twttr.events.bind('tweet', function(e){
-     /* if(!e) return;
-     * ga('send', 'social', 'twitter', 'tweet', theURL);*/
-     twttr.widgets.load(
-     document.getElementById("messages")
-     );
-     })
-     });
-     }, false);
-     }, false);
-
-     </script> -->
-<script>
- twttr.widgets.createTweet(
-   '20',
-   document.getElementById('first-tweet'),
-   {
-     theme: 'dark'
-   }
- );
-document.getElementById('first-tweet').then('first-tweet')
-</script>
